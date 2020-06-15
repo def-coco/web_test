@@ -1,0 +1,6 @@
+正在定位元素信息：定位方式->xpath,value值->//*[@id="db-isay"]/form/ul/li[1]/a
+正在定位元素信息：定位方式->xpath,value值->//*[@id="isay-cont"]
+正在定位元素信息：定位方式->id,value值->isay-submit
+正在定位元素信息：定位方式->xpath,value值->//*[@id="statuses"]/div[2]/div/div/div/div[2]/div[1]/blockquote/p
+获取到的内容是：1234567890
+True
