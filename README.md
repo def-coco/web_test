@@ -16,7 +16,7 @@ web自动化项目
 
 # 运行用例
 
-生成的用例报告放在report目录下
+生成的用例报告放在report目录
 
 >pytest --alluredir ./report
 
