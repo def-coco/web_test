@@ -8,7 +8,7 @@ import allure
 import pytest
 import os
 from common.read_yml import read_ymldata
-
+import time
 
 cur_path = os.path.dirname(os.path.realpath(__file__))
 data = os.path.join(cur_path, "test_data.yml")
@@ -35,6 +35,7 @@ def test_say_word(login_fixture, test_input, expect_text, expected, title):
     with allure.step("3.点击发布"):
         say_word.submit_word()
     with allure.step("查看是否发布成功"):
+        time.sleep(5)
         result = say_word.is_submit_success(expect_text)
         print(result)
     with allure.step("断言：判断是否发布成功"):
