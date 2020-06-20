@@ -10,17 +10,20 @@ from selenium.webdriver.chrome.options import Options
 import time
 import platform
 
+
+print(platform.system())
 @pytest.fixture(scope="session")
 def driver(request):
     '''无界面启动chrome'''
-    print(platform.system())
     # 无界面
     if platform.system() == 'Windows':
         chrome_options = Options()
         chrome_options.add_argument('--window-size=1920,1080')
         # 设置当前窗口的宽度和高度
         chrome_options.add_argument('--headless')
-        _driver = webdriver.Chrome(chrome_options=chrome_options)
+        #去掉DevTools警告
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+        _driver = webdriver.Chrome(options=chrome_options)
     else:
         # linux启动
         chrome_options = Options()
