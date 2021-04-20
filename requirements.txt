@@ -34,7 +34,7 @@ numpy==1.17.2
 packaging==20.3
 pathspec==0.8.0
 pluggy==0.13.1
-py==1.8.1
+py==1.10.0
 pycparser==2.20
 pycryptodome==3.9.7
 pydantic==1.5.1
